@@ -30,6 +30,44 @@ Do NOT use for web page text extraction -- use web_scrape_to_markdown instead. D
         },
         required: [],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Extracted text from image"
+            },
+            "wordCount": {
+              "type": "number",
+              "description": "Number of words detected"
+            },
+            "characterCount": {
+              "type": "number",
+              "description": "Number of characters"
+            },
+            "confidence": {
+              "type": "number",
+              "description": "OCR confidence 0-100"
+            },
+            "language": {
+              "type": "string",
+              "description": "Detected language"
+            },
+            "imageSize": {
+              "type": "number",
+              "description": "Image size in bytes"
+            },
+            "source": {
+              "type": "string",
+              "description": "Image source (url or base64)"
+            }
+          },
+          "required": [
+            "text",
+            "wordCount",
+            "confidence"
+          ]
+        },
     },
   ],
 };
