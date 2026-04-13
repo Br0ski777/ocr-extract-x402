@@ -3,7 +3,7 @@ import type { ApiConfig } from "./shared";
 export const API_CONFIG: ApiConfig = {
   name: "ocr-extract",
   slug: "ocr-extract",
-  description: "Extract text from images using OCR. Supports URLs and base64 images.",
+  description: "Extract text from images via OCR -- URL or base64 input, confidence score, language detection. Multi-language.",
   version: "1.0.0",
   routes: [
     {
@@ -12,7 +12,15 @@ export const API_CONFIG: ApiConfig = {
       price: "$0.005",
       description: "Extract text from an image via OCR",
       toolName: "media_extract_text_from_image",
-      toolDescription: "Use this when you need to extract text from an image. Accepts an image URL or base64-encoded image data. Returns the extracted text, word count, confidence score, and detected language. Do NOT use for web page text extraction — use web_scrape_to_markdown instead. Do NOT use for PDF text extraction — use document_generate_pdf instead. Do NOT use for taking screenshots — use capture_screenshot instead.",
+      toolDescription: `Use this when you need to extract text from an image. Accepts an image URL or base64-encoded image. Returns OCR results in JSON.
+
+Returns: 1. text (extracted content) 2. wordCount 3. confidence score (0-1) 4. detectedLanguage 5. processingTime in ms.
+
+Example output: {"text":"Invoice #1234\\nDate: 2026-04-13\\nTotal: $1,500.00","wordCount":7,"confidence":0.94,"detectedLanguage":"eng","processingTime":320}
+
+Use this FOR digitizing receipts, extracting text from screenshots, reading scanned documents, parsing business cards, and automating data entry from images.
+
+Do NOT use for web page text extraction -- use web_scrape_to_markdown instead. Do NOT use for image resizing -- use media_resize_image instead. Do NOT use for taking screenshots -- use capture_screenshot instead.`,
       inputSchema: {
         type: "object",
         properties: {
