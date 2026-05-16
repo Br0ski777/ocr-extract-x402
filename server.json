@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "sse",
-      "url": "https://ocr-extract-x402-production.up.railway.app/mcp"
+      "url": "https://ocr-extract.api.klymax402.com/mcp"
     }
   ]
 }
