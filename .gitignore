@@ -1,1 +1,7 @@
-node_modules/eng.traineddata
+node_modules/
+dist/
+.env
+*.log
+.mcpregistry_registry_token
+.mcpregistry_github_token
+eng.traineddata
