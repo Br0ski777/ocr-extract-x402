@@ -37,7 +37,7 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `media_extract_text_from_image` | POST | `/api/ocr` | $0.005 | Extract text from an image via OCR |
+| `media_extract_text_from_image` | POST | `/api/ocr` | $0.012 | Extract text from an image via OCR |
 
 ### `media_extract_text_from_image`
 
