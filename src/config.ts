@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "POST",
       path: "/api/ocr",
-      price: "$0.005",
+      price: "$0.012",
       description: "Extract text from an image via OCR",
       toolName: "media_extract_text_from_image",
       toolDescription: "Use this when you need to extract text from an image. Accepts an image URL or base64-encoded image data. Returns the extracted text, word count, confidence score, and detected language. Do NOT use for web page text extraction — use web_scrape_to_markdown instead. Do NOT use for PDF text extraction — use document_generate_pdf instead. Do NOT use for taking screenshots — use capture_screenshot instead.",
